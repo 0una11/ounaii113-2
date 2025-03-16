@@ -4,5 +4,5 @@ __姓名：歐乃逸__
 __系級：科技116__
 ## 作業繳交區
 * 作業一(AI Agent 架構圖)
-* ![AI Agent 架構圖](ounaii113-2/AI Agent 架構圖.jpg)
+![GitHub Logo]([https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png](https://drive.google.com/file/d/1wCKz454-jZrv5htXfH2Yc2_ICPymQ4fP/view?usp=sharing))
 ## 專題連結區
