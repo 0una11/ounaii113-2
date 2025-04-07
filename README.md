@@ -15,5 +15,5 @@ __系級：科技116__
 
 * 作業三
 [程式碼](https://github.com/0una11/ounaii113-2/blob/main/test/dataAgent.py)
-![loginAI](https://github.com/0una11/ounaii113-2/blob/main/postAI.png)
+<img src="https://raw.githubusercontent.com/0una11/ounaii113-2/main/postAI.png" alt="loginAI" width="500">
 ## 專題連結區
