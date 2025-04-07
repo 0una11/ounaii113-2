@@ -13,4 +13,6 @@ __系級：科技116__
 [程式碼](https://github.com/0una11/ounaii113-2/blob/main/HW2/DRai.py)  
 <img src="https://raw.githubusercontent.com/0una11/ounaii113-2/main/DRai%E9%81%8B%E8%A1%8C.png" alt="DRai運行" width="500">
 
+* 作業三
+[程式碼](https://github.com/0una11/ounaii113-2/blob/main/test/dataAgent.py)
 ## 專題連結區
