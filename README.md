@@ -15,8 +15,8 @@ __系級：科技116__
 
 * 作業三(AI自動登入校務行政系統並進入學生請假頁面)
 <img src="https://raw.githubusercontent.com/0una11/ounaii113-2/main/postAI.png" alt="loginAI" width="500">
-[程式碼](https://github.com/0una11/ounaii113-2/blob/main/test/dataAgent.py)  
-[程式運行截圖 1](https://github.com/0una11/ounaii113-2/blob/main/HW2/debug_1_after_login.png)  
+[程式碼](https://github.com/0una11/ounaii113-2/blob/main/test/dataAgent.py)
+[程式運行截圖 1](https://github.com/0una11/ounaii113-2/blob/main/HW2/debug_1_after_login.png)
 [程式運行截圖 2](https://github.com/0una11/ounaii113-2/blob/main/HW2/debug_2_after_profile.png)
 
 ## 專題連結區
