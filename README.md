@@ -20,5 +20,5 @@ __系級：科技116__
   * [程式運行截圖 2](https://github.com/0una11/ounaii113-2/blob/main/HW2/debug_2_after_profile.png)
 
 * **作業四 (PDF檔生成)**
-  * [程式碼]
+  * [程式碼](https://github.com/0una11/ounaii113-2/blob/main/HW2/getPDF.py)
   * [PDF檔](https://github.com/0una11/ounaii113-2/blob/main/HW2/report_20250415_000103.pdf)
