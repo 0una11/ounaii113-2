@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>學生學習狀況分析系統</title>
+    <script src="https://cdn.socket.io/4.6.1/socket.io.min.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h1 { color: #2c3e50; }
+        #messages, #student-feedback { margin-top: 20px; white-space: pre-wrap; background: #f9f9f9; padding: 15px; border-radius: 8px; }
+        #plot { margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>📘 學生學習問卷分析系統</h1>
+
+    <form id="upload-form">
+        <label for="file">請上傳問卷 CSV 檔案：</label>
+        <input type="file" name="file" id="file" required>
+        <button type="submit">上傳並分析</button>
+    </form>
+
+    <div id="messages">
+        <h2>📢 系統訊息</h2>
+        <div id="updates"></div>
+    </div>
+
+    <div id="plot">
+        <h2>📊 團體分析圖表</h2>
+        <img id="plot-image" src="" alt="學習狀況圖表" style="max-width: 100%; display: none;">
+    </div>
+
+    <div id="student-feedback">
+        <h2>👥 個別建議</h2>
+        <div id="advices"></div>
+    </div>
+
+    <script>
+        const socket = io();
+
+        socket.on('update', function(data) {
+            const updates = document.getElementById('updates');
+            updates.innerHTML += '🟡 ' + data.message + '<br>';
+        });
+
+        socket.on('plot_generated', function(data) {
+            const plotImg = document.getElementById('plot-image');
+            plotImg.src = data.plot_url + '?t=' + new Date().getTime();  // 避免快取
+            plotImg.style.display = 'block';
+        });
+
+        socket.on('student_advice', function(data) {
+            const advices = document.getElementById('advices');
+            advices.innerHTML += '📝 ' + data.message + '<br><br>';
+        });
+
+        // 防止表單跳頁，改用 AJAX 上傳
+        document.getElementById('upload-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData();
+            const fileInput = document.getElementById('file');
+            if (fileInput.files.length === 0) return;
+
+            formData.append('file', fileInput.files[0]);
+
+            fetch('/upload', {
+                method: 'POST',
+                body: formData
+            }).then(response => {
+                if (response.ok) {
+                    console.log("✅ 檔案成功上傳");
+                } else {
+                    alert("❌ 上傳失敗");
+                }
+            });
+        });
+    </script>
+</body>
+</html>
